@@ -4,21 +4,32 @@
 myenv/
 env/
 venv/
+.venv/
 
 # Archivos de bases de datos
 db.sqlite3
+*.db
 
 # Archivos de configuración locales
 *.env
+.env.local
+.env.production
 
 # Archivos de caché de Python
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.so
 *.log
 
-# Archivos de migraciones innecesarios si recién empiezas
-**/migrations/*.pyc
-**/migrations/__pycache__/
+# Django específico
+media/
+staticfiles/
+static/
+*.pot
+
+
 
 # Archivos de VSCode o editores
 .vscode/
@@ -28,9 +39,15 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Node.js / React
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
 
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -38,19 +55,20 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
+# Coverage reports
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
