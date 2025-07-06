@@ -13,7 +13,7 @@ function MatchGrid() {
 
   return (
     <div>
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', }}>
       {matches.map((match, index)=>(
         
         <MatchCard key={index} localTeam={match.equipo_local} visitorTeam={match.equipo_visitante} date={match.fecha} result={match.resultado} /> 
