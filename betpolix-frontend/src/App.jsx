@@ -1,12 +1,25 @@
-
-
+import MatchGrid from "./components/sports/MatchGrid/MatchGrid"
+import Home from "./pages/Home/Home"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
 
   return (
-    <>
-      <div><h1>Bienbenido a betpolix</h1> </div>
-       
-    </>
+
+    <BrowserRouter>
+    
+      <div className="app">
+
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/matches" element={<MatchGrid/>}/>
+        </Routes>  
+    
+    
+    
+      </div>
+        </BrowserRouter>
+  
+      
   )
 }
 
