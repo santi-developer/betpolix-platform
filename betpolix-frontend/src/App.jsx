@@ -1,10 +1,13 @@
-
+import MatchGrid from "./components/sports/MatchGrid/MatchGrid"
 
 function App() {
 
   return (
     <>
-      <div><h1>Bienbenido a betpolix</h1> </div>
+      <div className="app">
+        <h1>Bienbenido a betpolix</h1>
+        <MatchGrid/>
+      </div>
        
     </>
   )

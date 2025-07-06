@@ -1,0 +1,26 @@
+.match-card {
+  background-color: blue;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 10px;
+}
+
+.teams {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.vs {
+  margin: 0 8px;
+  color: #888;
+}
+
+.date {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
