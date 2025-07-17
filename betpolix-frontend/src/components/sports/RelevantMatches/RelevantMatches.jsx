@@ -1,9 +1,6 @@
 import { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import MatchCard from '../MatchCard/MatchCard'
-=======
 import MatchCard from '../MatchCard/MatchCard';
->>>>>>> develop
+
 
 export default function RelevantMatches() {
 
