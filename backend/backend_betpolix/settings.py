@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api', # Registro de la aplicacion que se creo api
 
     'rest_framework',# Registro de djangoRestFramework
+    'rest_framework_simplejwt',
 
     'corsheaders', # Registro de corsheaders
 ]
@@ -50,7 +51,13 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20,
 }
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -135,6 +142,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 AUTH_USER_MODEL = 'api.Usuario'
 
 CORS_ALLOWED_ORIGINS = [

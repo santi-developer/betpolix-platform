@@ -1,5 +1,6 @@
 import './MatchCard.css'; 
 
+
 const MatchCard = ({ localTeam, visitorTeam, date , result}) => {
   return (
     <div className="match-card">
