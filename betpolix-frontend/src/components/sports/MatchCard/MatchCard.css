@@ -1,26 +1,67 @@
 .match-card {
-  background-color: blue;
-  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  padding: 16px;
-  width: 220px;
+  padding: 20px;
+  width: 240px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.match-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .teams {
   font-weight: bold;
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.team {
+  color: #1a252f;
   font-size: 18px;
 }
 
 .vs {
-  margin: 0 8px;
-  color: #888;
+  margin: 0 12px;
+  color: #7f8c8d;
+  font-weight: normal;
+  font-size: 14px;
 }
 
 .date {
   margin-top: 8px;
-  font-size: 14px;
-  color: #666;
+  font-size: 13px;
+  color: #7f8c8d;
+  background-color: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Opcional: Si quieres mantener un toque de color */
+.match-card-colored {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+.match-card-colored .teams,
+.match-card-colored .team {
+  color: white;
+}
+
+.match-card-colored .vs {
+  color: rgba(255,255,255,0.8);
+}
+
+.match-card-colored .date {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
 }
