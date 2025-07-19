@@ -6,7 +6,7 @@ const LogoutButton = () => {
 
     const handleLogout = () => { 
 
-        localStorage.removeItem("acces_token");
+        localStorage.removeItem("access_token");
         localStorage.removeItem("refresh_token");
         console.log("sesion cerrada de buena manera")
 

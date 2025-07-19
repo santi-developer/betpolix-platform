@@ -3,6 +3,8 @@ import { DashBoard } from "./pages/DashBoard/DashBoard";
 import Home from "./pages/Home/Home"
 import LoginPage from "./pages/LoginPage/LoginPage";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProtectedRoute from "./components/common/ProtectedRoute";
+
 function App() {
 
   return (
@@ -15,7 +17,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/matches" element={<MatchGrid/>}/>
           <Route path="/login" element={<LoginPage/>}/>
-          <Route path="/dashboard" element={<DashBoard/>}/>
+          <Route path="/dashboard" element={<ProtectedRoute><DashBoard/></ProtectedRoute>}/>
         </Routes>  
     
     
