@@ -24,7 +24,7 @@ export default function LoginForm() {
 
       const data = await response.json();
 
-      localStorage.setItem('access_token',data.acces);
+      localStorage.setItem('access_token',data.access);
       localStorage.setItem('refresh_token',data.refresh);
       console.log('autenticado correctamente');
 
