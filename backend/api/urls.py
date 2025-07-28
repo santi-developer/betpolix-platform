@@ -1,5 +1,5 @@
 from django.urls import include, path
-from .views import  PartidoViewSet, PartidosRelevantesView
+from .views import  PartidoViewSet, PartidosRelevantesView, UserSaldoView
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -23,5 +23,6 @@ urlpatterns = [
 
     # API endpoints
     path('',include(router.urls)),
-     path('partidos/relevantes/', PartidosRelevantesView.as_view(), name='partidos-relevantes'),
+    path('partidos/relevantes/', PartidosRelevantesView.as_view(), name='partidos-relevantes'),
+    path('saldo/',UserSaldoView.as_view(), name='saldo'),
 ]
